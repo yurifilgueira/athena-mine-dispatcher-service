@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name = "jobs")
 public class Job {
 
     @Id
@@ -23,11 +24,14 @@ public class Job {
     private Date startedAt;
     @Column(length = 100)
     private Date finishedAt;
+    @Column(length = 100)
+    private Date lastUpdated;
     @Column(length = 100, nullable = false)
     private String gitRepositoryOwner;
     @Column(length = 100, nullable = false)
     private String gitRepositoryName;
-
+    @Column(length = 100)
+    private String cursor;
 
     public String getId() {
         return id;
@@ -45,11 +49,11 @@ public class Job {
         this.requestedBy = requestedBy;
     }
 
-    public JobStatus getStatus() {
+    public JobStatus getJobStatus() {
         return jobStatus;
     }
 
-    public void setStatus(JobStatus jobStatus) {
+    public void setJobStatus(JobStatus jobStatus) {
         this.jobStatus = jobStatus;
     }
 
@@ -77,6 +81,14 @@ public class Job {
         this.finishedAt = finishedAt;
     }
 
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(Date lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
     public String getGitRepositoryOwner() {
         return gitRepositoryOwner;
     }
@@ -91,6 +103,14 @@ public class Job {
 
     public void setGitRepositoryName(String gitRepositoryName) {
         this.gitRepositoryName = gitRepositoryName;
+    }
+
+    public String getCursor() {
+        return cursor;
+    }
+
+    public void setCursor(String cursor) {
+        this.cursor = cursor;
     }
 
     @Override
