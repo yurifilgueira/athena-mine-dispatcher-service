@@ -2,12 +2,14 @@ package com.projectathena.mineservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class AthenaMineServiceApplication {
+@EnableDiscoveryClient
+public class AthenaMineDispatcherServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AthenaMineServiceApplication.class, args);
+        SpringApplication.run(AthenaMineDispatcherServiceApplication.class, args);
     }
 
 }

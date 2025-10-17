@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yuri</groupId>
-    <artifactId>athena-mine-service</artifactId>
+    <artifactId>athena-mine-dispatcher-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>athena-mine-service</name>
     <description>athena-mine-service</description>
@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
     </properties>
     <dependencies>
@@ -42,6 +42,16 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
