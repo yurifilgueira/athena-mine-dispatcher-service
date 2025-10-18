@@ -1,7 +1,7 @@
-package com.projectathena.mineservice.services;
+package com.projectathena.minedispatcherservice.services;
 
-import com.projectathena.mineservice.model.entities.Job;
-import com.projectathena.mineservice.model.enums.JobStatus;
+import com.projectathena.minedispatcherservice.model.entities.Job;
+import com.projectathena.minedispatcherservice.model.enums.JobStatus;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,10 +27,6 @@ public class JobTimeoutScanner {
         List<Job> jobs = jobService.findJobsByStatus(JobStatus.MINING);
 
         for (Job job : jobs) {
-
-            logger.info("Job Timeout Scanner: " + job.getId());
-            logger.info("Job Timeout Scanner: " + job.getJobStatus());
-
             Instant jobLastUpdatedAt = job.getLastUpdated().toInstant();
             Instant now = Instant.now();
             Duration duration = Duration.between(jobLastUpdatedAt, now);

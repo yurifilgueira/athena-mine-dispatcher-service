@@ -1,4 +1,4 @@
-package com.projectathena.mineservice;
+package com.projectathena.minedispatcherservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package com.projectathena.mineservice.model.entities;
+package com.projectathena.minedispatcherservice.model.entities;
 
-import com.projectathena.mineservice.model.enums.JobStatus;
+import com.projectathena.minedispatcherservice.model.enums.JobStatus;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -32,6 +32,8 @@ public class Job {
     private String gitRepositoryName;
     @Column(length = 100)
     private String cursor;
+    @Column(length = 100)
+    private String workerId;
 
     public String getId() {
         return id;
@@ -111,6 +113,14 @@ public class Job {
 
     public void setCursor(String cursor) {
         this.cursor = cursor;
+    }
+
+    public String getWorkerId() {
+        return workerId;
+    }
+
+    public void setWorkerId(String workerId) {
+        this.workerId = workerId;
     }
 
     @Override

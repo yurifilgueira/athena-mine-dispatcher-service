@@ -1,7 +1,7 @@
-package com.projectathena.mineservice.repositories;
+package com.projectathena.minedispatcherservice.repositories;
 
-import com.projectathena.mineservice.model.entities.Job;
-import com.projectathena.mineservice.model.enums.JobStatus;
+import com.projectathena.minedispatcherservice.model.entities.Job;
+import com.projectathena.minedispatcherservice.model.enums.JobStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

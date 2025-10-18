@@ -1,4 +1,4 @@
-package com.projectathena.mineservice.model.enums;
+package com.projectathena.minedispatcherservice.model.enums;
 
 public enum JobStatus {
 

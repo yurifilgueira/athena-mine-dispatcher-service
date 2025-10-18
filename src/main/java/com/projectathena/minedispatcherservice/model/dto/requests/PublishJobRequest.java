@@ -1,4 +1,4 @@
-package com.projectathena.mineservice.model.dto.requests;
+package com.projectathena.minedispatcherservice.model.dto.requests;
 
 public record PublishJobRequest (
          String requestedBy,
